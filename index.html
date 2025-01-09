@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="counter.js" defer></script>
-  <link rel="stylesheet" href="counter.css">
-  <title>Counter Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>download...</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
 </head>
-<body>
-  
-  <h1 class="sched">Class Schedule</h1>
-  
-  <p>First Semester - BSN 1A</p>
 
-  <div class="mon">
+<body>
+
+  <button>Download</button>
+
+  <script>
+  
+  let btn = document.querySelector('button')
+  
+  btn.onclick = ()=>{
     
-    <h3 class="signMon">Monday</h3>
+    let link = document.createElement('a')
     
-    <h5 class="monTime">9:00 AM - 12:00 NN</h5>
+    link.href = "/ccit-logo.png"
     
-    <h5 class="monSub">GEC4 Arts Appreciation</h5>
+    link.download = "/ccit-logo.png"
     
-    <p class="online">on-line</p>
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
     
-  </div>
+  }
+    
+  </script>
 
 </body>
+
 </html>
